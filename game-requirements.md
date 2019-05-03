@@ -1,6 +1,6 @@
 # Project 1 - Peer Code Review Checklist
 
-### Developer: ________________________
+### Developer: ____Joseph Coburn_______
 ### Reviewer: _________________________
 ---
 

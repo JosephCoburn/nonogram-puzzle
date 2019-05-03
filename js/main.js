@@ -1,6 +1,6 @@
 /*----- constants -----*/
 
-/*----- app's state (variables) -----*/
+/*----- app's state variables -----*/
 
 /*----- cached element references -----*/
 
