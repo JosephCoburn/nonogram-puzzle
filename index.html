@@ -5,251 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nonogram Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Tangerine" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
 </head>
 <body>
-    <h1>NONOGRAM GAME</h1>
+    <h1>Nonogram Game</h1>
+    <section>
+        <div class="deadKey" id="c0r0"></div>
+        <div class="topKey" id="c1r0">4</div>
+        <div class="topKey" id="c2r0">1<br>2</div>
+        <div class="topKey" id="c3r0">1<br>6</div>
+        <div class="topKey" id="c4r0">3<br>2<br>1</div>
+        <div class="topKey" id="c5r0">4<br>1</div>
+        <div class="topKey" id="c6r0">4<br>1</div>
+        <div class="topKey" id="c7r0">3<br>2<br>1</div>
+        <div class="topKey" id="c8r0">1<br>6</div>
+        <div class="topKey" id="c9r0">1<br>2</div>
+        <div class="topKey" id="c10r0">4</div>
 
-    <div class="container">
-    <table id="table1">
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-         <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-    </table>
-    </div>
-          <!-- 
-          <td id="r9sq0"><div></div></td>
-          <td id="r9sq1"><div></div></td>
-          <td id="r9sq2"><div></div></td>
-          <td id="r9sq3"><div></div></td>
-          <td id="r9sq4"><div></div></td>
-          <td id="r9sq5"><div></div></td>
-          <td id="r9sq6"><div></div></td>
-          <td id="r9sq7"><div></div></td>
-          <td id="r9sq8"><div></div></td>
-          <td id="r9sq9"><div></div></td>
+        <div class="leftKey" id="c0r1">1 1</div>
+        <div id="c1r1"></div>
+        <div id="c2r1"></div>
+        <div id="c3r1"></div>
+        <div id="c4r1"></div>
+        <div id="c5r1"></div>
+        <div id="c6r1"></div>
+        <div id="c7r1"></div>
+        <div id="c8r1"></div>
+        <div id="c9r1"></div>
+        <div id="c10r1"></div>
 
-          <td id="r8sq0"><div></div></td>
-          <td id="r8sq1"><div></div></td>
-          <td id="r8sq2"><div></div></td>
-          <td id="r8sq3"><div></div></td>
-          <td id="r8sq4"><div></div></td>
-          <td id="r8sq5"><div></div></td>
-          <td id="r8sq6"><div></div></td>
-          <td id="r8sq7"><div></div></td>
-          <td id="r8sq8"><div></div></td>
-          <td id="r8sq9"><div></div></td>
+        <div class="leftKey" id="c0r2">2 2</div>
+        <div id="c1r2"></div>
+        <div id="c2r2"></div>
+        <div id="c3r2"></div>
+        <div id="c4r2"></div>
+        <div id="c5r2"></div>
+        <div id="c6r2"></div>
+        <div id="c7r2"></div>
+        <div id="c8r2"></div>
+        <div id="c9r2"></div>
+        <div id="c10r2"></div>
 
-          <td id="r7sq0"><div></div></td>
-          <td id="r7sq1"><div></div></td>
-          <td id="r7sq2"><div></div></td>
-          <td id="r7sq3"><div></div></td>
-          <td id="r7sq4"><div></div></td>
-          <td id="r7sq5"><div></div></td>
-          <td id="r7sq6"><div></div></td>
-          <td id="r7sq7"><div></div></td>
-          <td id="r7sq8"><div></div></td>
-          <td id="r7sq9"><div></div></td>
+        <div class="leftKey" id="c0r3">1 1</div>
+        <div id="c1r3"></div>
+        <div id="c2r3"></div>
+        <div id="c3r3"></div>
+        <div id="c4r3"></div>
+        <div id="c5r3"></div>
+        <div id="c6r3"></div>
+        <div id="c7r3"></div>
+        <div id="c8r3"></div>
+        <div id="c9r3"></div>
+        <div id="c10r3"></div>
 
-          <td id="r6sq0"><div></div></td>
-          <td id="r6sq1"><div></div></td>
-          <td id="r6sq2"><div></div></td>
-          <td id="r6sq3"><div></div></td>
-          <td id="r6sq4"><div></div></td>
-          <td id="r6sq5"><div></div></td>
-          <td id="r6sq6"><div></div></td>
-          <td id="r6sq7"><div></div></td>
-          <td id="r6sq8"><div></div></td>
-          <td id="r6sq9"><div></div></td>
+        <div class="leftKey" id="c0r4">6</div>
+        <div id="c1r4"></div>
+        <div id="c2r4"></div>
+        <div id="c3r4"></div>
+        <div id="c4r4"></div>
+        <div id="c5r4"></div>
+        <div id="c6r4"></div>
+        <div id="c7r4"></div>
+        <div id="c8r4"></div>
+        <div id="c9r4"></div>
+        <div id="c10r4"></div>
 
-          <td id="r5sq0"><div></div></td>
-          <td id="r5sq1"><div></div></td>
-          <td id="r5sq2"><div></div></td>
-          <td id="r5sq3"><div></div></td>
-          <td id="r5sq4"><div></div></td>
-          <td id="r5sq5"><div></div></td>
-          <td id="r5sq6"><div></div></td>
-          <td id="r5sq7"><div></div></td>
-          <td id="r5sq8"><div></div></td>
-          <td id="r5sq9"><div></div></td>
+        <div class="leftKey" id="c0r5">2 2 2</div>
+        <div id="c1r5"></div>
+        <div id="c2r5"></div>
+        <div id="c3r5"></div>
+        <div id="c4r5"></div>
+        <div id="c5r5"></div>
+        <div id="c6r5"></div>
+        <div id="c7r5"></div>
+        <div id="c8r5"></div>
+        <div id="c9r5"></div>
+        <div id="c10r5"></div>
 
-          <td id="r4sq0"><div></div></td>
-          <td id="r4sq1"><div></div></td>
-          <td id="r4sq2"><div></div></td>
-          <td id="r4sq3"><div></div></td>
-          <td id="r4sq4"><div></div></td>
-          <td id="r4sq5"><div></div></td>
-          <td id="r4sq6"><div></div></td>
-          <td id="r4sq7"><div></div></td>
-          <td id="r4sq8"><div></div></td>
-          <td id="r4sq9"><div></div></td>
+        <div class="leftKey" id="c0r6">10</div>
+        <div id="c1r6"></div>
+        <div id="c2r6"></div>
+        <div id="c3r6"></div>
+        <div id="c4r6"></div>
+        <div id="c5r6"></div>
+        <div id="c6r6"></div>
+        <div id="c7r6"></div>
+        <div id="c8r6"></div>
+        <div id="c9r6"></div>
+        <div id="c10r6"></div>
 
-          <td id="r3sq0"><div></div></td>
-          <td id="r3sq1"><div></div></td>
-          <td id="r3sq2"><div></div></td>
-          <td id="r3sq3"><div></div></td>
-          <td id="r3sq4"><div></div></td>
-          <td id="r3sq5"><div></div></td>
-          <td id="r3sq6"><div></div></td>
-          <td id="r3sq7"><div></div></td>
-          <td id="r3sq8"><div></div></td>
-          <td id="r3sq9"><div></div></td>
+        <div class="leftKey" id="c0r7">1 6 1</div>
+        <div id="c1r7"></div>
+        <div id="c2r7"></div>
+        <div id="c3r7"></div>
+        <div id="c4r7"></div>
+        <div id="c5r7"></div>
+        <div id="c6r7"></div>
+        <div id="c7r7"></div>
+        <div id="c8r7"></div>
+        <div id="c9r7"></div>
+        <div id="c10r7"></div>
 
-          <td id="r2sq0"><div></div></td>
-          <td id="r2sq1"><div></div></td>
-          <td id="r2sq2"><div></div></td>
-          <td id="r2sq3"><div></div></td>
-          <td id="r2sq4"><div></div></td>
-          <td id="r2sq5"><div></div></td>
-          <td id="r2sq6"><div></div></td>
-          <td id="r2sq7"><div></div></td>
-          <td id="r2sq8"><div></div></td>
-          <td id="r2sq9"><div></div></td>
+        <div class="leftKey" id="c0r8">1 1 1 1</div>
+        <div id="c1r8"></div>
+        <div id="c2r8"></div>
+        <div id="c3r8"></div>
+        <div id="c4r8"></div>
+        <div id="c5r8"></div>
+        <div id="c6r8"></div>
+        <div id="c7r8"></div>
+        <div id="c8r8"></div>
+        <div id="c9r8"></div>
+        <div id="c10r8"></div>
 
-          <td id="r1sq0"><div></div></td>
-          <td id="r1sq1"><div></div></td>
-          <td id="r1sq2"><div></div></td>
-          <td id="r1sq3"><div></div></td>
-          <td id="r1sq4"><div></div></td>
-          <td id="r1sq5"><div></div></td>
-          <td id="r1sq6"><div></div></td>
-          <td id="r1sq7"><div></div></td>
-          <td id="r1sq8"><div></div></td>
-          <td id="r1sq9"><div></div></td>
+        <div class="leftKey" id="c0r9">1 2 2 1</div>
+        <div id="c1r9"></div>
+        <div id="c2r9"></div>
+        <div id="c3r9"></div>
+        <div id="c4r9"></div>
+        <div id="c5r9"></div>
+        <div id="c6r9"></div>
+        <div id="c7r9"></div>
+        <div id="c8r9"></div>
+        <div id="c9r9"></div>
+        <div id="c10r9"></div>
 
-          <td id="r0sq0"><div></div></td>
-          <td id="r0sq1"><div></div></td>
-          <td id="r0sq2"><div></div></td>
-          <td id="r0sq3"><div></div></td>
-          <td id="r0sq4"><div></div></td>
-          <td id="r0sq5"><div></div></td>
-          <td id="r0sq6"><div></div></td>
-          <td id="r0sq7"><div></div></td>
-          <td id="r0sq8"><div></div></td>
-          <td id="r0sq9"><div></div></td> -->
-
+        <div class="leftKey" id="c0r10">2</div>
+        <div id="c1r10"></div>
+        <div id="c2r10"></div>
+        <div id="c3r10"></div>
+        <div id="c4r10"></div>
+        <div id="c5r10"></div>
+        <div id="c6r10"></div>
+        <div id="c7r10"></div>
+        <div id="c8r10"></div>
+        <div id="c9r10"></div>
+        <div id="c10r10"></div>
     </section>
     <button id="play">PLAY</button>
     <button id="check">CHECK</button>
     <article>INSTRUCTIONS</article>
-    <footer>ABOUT</footer>
 </body>
 </html>
