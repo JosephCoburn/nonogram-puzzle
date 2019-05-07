@@ -1,11 +1,11 @@
 /*----- constants -----*/
-        // store value of each cell
+    // store value of each cell
 const COLORS = {
     '0': 'white',
     '1': 'black'
 };
 
-// store value of puzzle solution
+    // store value of puzzle solution
 var solution = [
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 0
 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0], // column 1
@@ -24,14 +24,14 @@ var solution = [
 var board, winner, turn;
 
 /*----- cached element references -----*/
-// var message = document.querySelector("");
-// var square = document.querySelectorAll('.square');
+    // var message = document.querySelector("");
+    // var square = document.querySelectorAll('.square');
 
 /*----- event listeners -----*/
-// document.getElementById("check").addEventListener("click", checkSolution);
-// square.forEach(function(element) {
+    // document.getElementById("check").addEventListener("click", checkSolution);
+    // square.forEach(function(element) {
     // element.addEventListener("click", handleClick)
-// });
+    // });
 document.getElementById('clickable-board')
   .addEventListener('click', handleClick)
 
@@ -39,32 +39,31 @@ document.getElementById('clickable-board')
 /*----- functions -----*/
 initialize();
 
-        // process shading activity
+    // process shading activity
 function handleClick(evt) {
    const marker = evt.target;
    console.log(marker)
    const cellIdx = marker.id.replace('col', '');
 }
 
-        // check if current board array === solution array
-function checkSolution() {
+    // check if current board array === solution array
+function checkWin() {
 
 }
 
-        // display empty clickable grid
+    // display empty clickable grid
 function render() {
     //display the board
     board.forEach(function(colArr, colIdx) {
         colArr.forEach(function(cell, rowIdx) {
-            // access the correct div in each section
+    // access the correct div in each section
             const div = document.getElementById(`c${colIdx}r${rowIdx}`);
             div.style.backgroundColor = COLORS[cell];
         });
     });
-
 }
 
-        // initialize empty board
+    // initialize empty board
 function initialize() {
     board = [
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 0
@@ -82,8 +81,4 @@ function initialize() {
     winner = null;
     turn = 1;
     render();
-}
-
-function displayKey() {
-
 }
