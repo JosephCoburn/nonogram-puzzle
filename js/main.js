@@ -6,8 +6,8 @@ const COLORS = {
 };
 
     // Store puzzle solution
-var solution = [
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 0
+const solution = [
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 
 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0], // column 1
 [0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0], // column 2
 [0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0], // column 3
@@ -28,7 +28,7 @@ var board, winner, turn;
 /*----- event listeners -----*/
 
 document.getElementById('gameBoard')
-  .addEventListener('click', handleClick)
+  .addEventListener('click', handleClick);
 
 
 /*----- functions -----*/
@@ -37,23 +37,24 @@ initialize();
     // process shading activity
 function handleClick(evt) {
    const marker = evt.target;
-   console.log(marker)
-   const cellIdx = marker.id.replace('col', '');
+   const colIdx = marker.id.replace('col', '');
+    // IF USING ABOVE AND NO ID'S FOR KEYS - ADD PARSEINT AND::: 
+      // if (isNaN(colIdx)) return;
+    // UPDATE TO FIND EXACT POSITION INSTEAD OF FIRST ZERO::: 
+      // const rowIdx = board[colIdx].indexOf(zero);
+    board[colIdx][rowIdx] = turn;
+    turn = -1;
+    render();
 }
 
     // check if current board array === solution array
 function checkWin() {
-
+    if (board === solution) {
+        alert('You win!');
+    }
 }
 
-    // Display empty clickable grid
 function render() {
-    // Display message
-    if (winner) {
-
-    } else {
-
-    }
     // Display the board
     board.forEach(function(colArr, colIdx) {
         colArr.forEach(function(cell, rowIdx) {
@@ -62,12 +63,14 @@ function render() {
             div.style.backgroundColor = COLORS[cell];
         });
     });
+    // Display win message
+    if (winner) {} else {}
 }
 
     // Initialize board
 function initialize() {
     board = [
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 0
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 1
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 2
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 3
