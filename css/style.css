@@ -7,13 +7,10 @@ body {
     height: 100vh;
     margin: 0;
     text-align: center;
-}
-
-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -27,13 +24,16 @@ section {
     display: grid;
     grid-template-columns: 65px repeat(10, 30px);
     grid-template-rows: 65px repeat(10, 30px); 
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 section div {
     border: 1px solid black;
 }
 
-#clickable-board {
+#gameBoard {
     display: grid;
     grid-template-columns: 65px repeat(10, 30px);
     grid-template-rows: 65px repeat(10, 30px); 

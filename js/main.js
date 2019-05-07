@@ -1,11 +1,11 @@
 /*----- constants -----*/
-    // store value of each cell
+    // Value Color pairs for each cell
 const COLORS = {
     '0': 'white',
-    '1': 'black'
+    '1': 'black',
 };
 
-    // store value of puzzle solution
+    // Store puzzle solution
 var solution = [
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 0
 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0], // column 1
@@ -24,15 +24,10 @@ var solution = [
 var board, winner, turn;
 
 /*----- cached element references -----*/
-    // var message = document.querySelector("");
-    // var square = document.querySelectorAll('.square');
 
 /*----- event listeners -----*/
-    // document.getElementById("check").addEventListener("click", checkSolution);
-    // square.forEach(function(element) {
-    // element.addEventListener("click", handleClick)
-    // });
-document.getElementById('clickable-board')
+
+document.getElementById('gameBoard')
   .addEventListener('click', handleClick)
 
 
@@ -51,19 +46,25 @@ function checkWin() {
 
 }
 
-    // display empty clickable grid
+    // Display empty clickable grid
 function render() {
-    //display the board
+    // Display message
+    if (winner) {
+
+    } else {
+
+    }
+    // Display the board
     board.forEach(function(colArr, colIdx) {
         colArr.forEach(function(cell, rowIdx) {
-    // access the correct div in each section
+    // Access the correct div in the section
             const div = document.getElementById(`c${colIdx}r${rowIdx}`);
             div.style.backgroundColor = COLORS[cell];
         });
     });
 }
 
-    // initialize empty board
+    // Initialize board
 function initialize() {
     board = [
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 0
@@ -76,7 +77,7 @@ function initialize() {
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 7
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 8
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 9
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] // column 10
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  // column 10
     ];
     winner = null;
     turn = 1;
