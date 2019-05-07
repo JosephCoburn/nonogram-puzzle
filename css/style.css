@@ -25,12 +25,22 @@ h1 {
 
 section {
     display: grid;
-    grid-template-columns: 62px repeat(10, 30px);
-    grid-template-rows: 62px repeat(10, 30px); 
+    grid-template-columns: 65px repeat(10, 30px);
+    grid-template-rows: 65px repeat(10, 30px); 
 }
 
 section div {
     border: 1px solid black;
+}
+
+#clickable-board {
+    display: grid;
+    grid-template-columns: 65px repeat(10, 30px);
+    grid-template-rows: 65px repeat(10, 30px); 
+}
+
+#clickable-board div {
+    
 }
 
 /* table {
@@ -67,17 +77,11 @@ tr,td {
       text-align:left;
       border: 1px solid black;
 } 
- 
+
 td {
     width: 30px;
     height: 30px;
     padding: 0;
-}
-
-.keyTop {
-    vertical-align: bottom;
-    text-align: center;
-    font-weight: bolder;
 }
 
 .keyLeft {

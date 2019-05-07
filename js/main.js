@@ -1,6 +1,6 @@
 /*----- constants -----*/
         // store value of each cell
-var onOff = {
+const COLORS = {
     '0': 'white',
     '1': 'black'
 };
@@ -21,22 +21,29 @@ var solution = [
 ];
 
 /*----- app's state variables -----*/
-var board, winner;
+var board, winner, turn;
 
 /*----- cached element references -----*/
 // var message = document.querySelector("");
+// var square = document.querySelectorAll('.square');
 
 /*----- event listeners -----*/
-// document.querySelector("section").addEventListener("click", handleClick);
 // document.getElementById("check").addEventListener("click", checkSolution);
-// document.getElementById("play").addEventListener("click", displayKey);
+// square.forEach(function(element) {
+    // element.addEventListener("click", handleClick)
+// });
+document.getElementById('clickable-board')
+  .addEventListener('click', handleClick)
+
 
 /*----- functions -----*/
 initialize();
 
         // process shading activity
 function handleClick(evt) {
-
+   const marker = evt.target;
+   console.log(marker)
+   const cellIdx = marker.id.replace('col', '');
 }
 
         // check if current board array === solution array
@@ -51,7 +58,7 @@ function render() {
         colArr.forEach(function(cell, rowIdx) {
             // access the correct div in each section
             const div = document.getElementById(`c${colIdx}r${rowIdx}`);
-            div.style.backgroundColor = onOff[cell];
+            div.style.backgroundColor = COLORS[cell];
         });
     });
 
@@ -73,6 +80,7 @@ function initialize() {
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] // column 10
     ];
     winner = null;
+    turn = 1;
     render();
 }
 
