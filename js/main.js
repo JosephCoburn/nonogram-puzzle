@@ -1,3 +1,6 @@
+document.getElementsByTagName('h1')
+
+
 /*----- constants -----*/
 
     // Store puzzle solution
@@ -15,30 +18,26 @@ const solution = [
 [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0] // column 10
 ];
 
-
-
 /*----- app's state variables -----*/
 var board;
 
 /*----- cached element references -----*/
 
 /*----- event listeners -----*/
-
 document.getElementById('gameBoard')
   .addEventListener('click', handleClick);
-
 
 /*----- functions -----*/
 initialize();
 
-    // process shading activity
+// process shading activity and flip binary values
 function handleClick(evt) {
    const marker = evt.target;
     var markerString = marker.id;
-    var rowrArr = markerString.split('r');
-    var rowIdx = rowrArr[rowrArr.length-1];
-    rowrArr.pop();
-    var colIdx = rowrArr.join('').replace('c', '');
+    var rowArr = markerString.split('r');
+    var rowIdx = rowArr[rowArr.length-1];
+    rowArr.pop();
+    var colIdx = rowArr.join('').replace('c', '');
     if(colIdx != 0){
 
         if(!marker.style.backgroundColor){
@@ -48,7 +47,6 @@ function handleClick(evt) {
             marker.style.backgroundColor = ''
             board[rowIdx][colIdx] = 0
         }
-        
     }
     checkWin()
     render();
@@ -57,7 +55,8 @@ function handleClick(evt) {
     // check if current board array === solution array
 function checkWin() {
     if (board.toString() === solution.toString()) {
-        alert('You win!');
+        document.getElementById("headline").innerHTML = "You Win!";
+        document.getElementById("headline").style.fontSize = "70px";
     }
 }
 
