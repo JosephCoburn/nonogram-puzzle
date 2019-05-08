@@ -27,6 +27,11 @@ var board;
 document.getElementById('gameBoard')
   .addEventListener('click', handleClick);
 
+// var myBoard = document.querySelectorAll('div');
+// for (i = 0; i < myBoard.length; i++) { 
+//     myBoard[i].style.backgroundColor = "white"
+//   }
+
 /*----- functions -----*/
 initialize();
 
@@ -39,11 +44,11 @@ function handleClick(evt) {
     rowArr.pop();
     var colIdx = rowArr.join('').replace('c', '');
     if(colIdx != 0){
-
-        if(!marker.style.backgroundColor){
+        console.log(marker.style.backgroundColor)
+        if (!marker.style.backgroundColor){
             marker.style.backgroundColor = 'black'
-            board[rowIdx][colIdx] = 1
-        } else {
+            board[rowIdx][colIdx] = 1;
+        } else if (marker.style.backgroundColor = 'black') {
             marker.style.backgroundColor = ''
             board[rowIdx][colIdx] = 0
         }
@@ -52,7 +57,7 @@ function handleClick(evt) {
     render();
 }
 
-    // check if current board array === solution array
+// Check if current board array matches solution array
 function checkWin() {
     if (board.toString() === solution.toString()) {
         document.getElementById("headline").innerHTML = "You Win!";
@@ -60,11 +65,11 @@ function checkWin() {
     }
 }
 
-function render() {
-    // Display the board            
+// Display the board
+function render() {           
 }
 
-    // Initialize board
+// Initialize board
 function initialize() {
     board = [
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 

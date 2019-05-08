@@ -12,7 +12,7 @@ h1 {
     font-family: 'Tangerine', cursive;
     font-size: 45px;
     text-align: center;
-    margin: 40px;
+    margin: 20px;
 }
 
 #gameBoard {
@@ -84,14 +84,3 @@ div {
         border-left: white;
         border-top: white;
     }
-
-
-
-* order of properties
-* nested tags properties apply to innermost
-* styling order: tag, class, id
-* using pizels vs % vs view 
-    * mobile deployment?
-* why vertical align doesnt work for topkey div
-* hacky vert centering for leftkey via padding vs using property
-* bold center lines of grid
