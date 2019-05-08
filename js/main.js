@@ -15,6 +15,8 @@ const solution = [
 [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0] // column 10
 ];
 
+
+
 /*----- app's state variables -----*/
 var board;
 
@@ -37,7 +39,6 @@ function handleClick(evt) {
     var rowIdx = rowrArr[rowrArr.length-1];
     rowrArr.pop();
     var colIdx = rowrArr.join('').replace('c', '');
-    // console.log(colIdx)
     if(colIdx != 0){
 
         if(!marker.style.backgroundColor){
