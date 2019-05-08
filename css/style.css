@@ -1,7 +1,3 @@
-*, *::after, *::before {
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Didact Gothic', sans-serif;
     height: 100vh;
@@ -20,7 +16,7 @@ h1 {
     margin: 40px;
 }
 
-section#gameBoard {
+#gameBoard {
     display: grid;
     grid-template-columns: 65px repeat(10, 30px);
     grid-template-rows: 30px repeat(9, 30px); 
@@ -29,11 +25,18 @@ section#gameBoard {
     align-content: center;
 }
 
-section div {
+div {
     border: 1px solid black;
 }
 
 .topKey {
     grid-template-columns: 65px repeat(10, 30px);
     display: grid;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.leftKey {
+    text-align: right;
+    padding: 0px 5px 0px 0px;
 }

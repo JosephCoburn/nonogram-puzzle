@@ -1,9 +1,4 @@
 /*----- constants -----*/
-    // Value Color pairs for each cell
-// const COLORS = {
-//     '0': 'white',
-//     '1': 'black',
-// };
 
     // Store puzzle solution
 const solution = [
@@ -21,7 +16,7 @@ const solution = [
 ];
 
 /*----- app's state variables -----*/
-var board, winner, turn;
+var board;
 
 /*----- cached element references -----*/
 
@@ -55,18 +50,6 @@ function handleClick(evt) {
         
     }
     checkWin()
-
-    // var colIdx = marker.id.substring(1,2);
-    // var rowIdx = marker.id.split('r')[marker.id.split('').length -1 ];
-
-//    console.log("column index", colIdx, "row index", rowIdx);
-   console.log(board);
-   
-    // UPDATE TO FIND EXACT POSITION AT INDEXOF::: 
-    // const rowIdx = board[colIdx].indexOf();
-
-    // board[colIdx][rowIdx] = turn;
-    // turn = -1;
     render();
 }
 
@@ -79,16 +62,6 @@ function checkWin() {
 
 function render() {
     // Display the board            
-    // const div = document.getElementById(`c${colIdx}r${rowIdx}`);
-    //     div.style.backgroundColor = COLORS[cell];
-    // board.forEach(function(colArr, colIdx) {
-    //     colArr.forEach(function(cell, rowIdx) {
-    // // // Access the correct div in the section
-
-    //     });
-    // });
-    // Display win message
-    if (winner) {} else {}
 }
 
     // Initialize board
@@ -106,7 +79,5 @@ function initialize() {
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 9
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  // column 10
     ];
-    winner = null;
-    turn = 1;
     render();
 }
