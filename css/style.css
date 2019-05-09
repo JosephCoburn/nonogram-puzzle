@@ -15,6 +15,13 @@ h1 {
     margin: 20px;
 }
 
+article {
+    font-family: 'Tangerine', cursive;
+    padding: 10px 0 0 0;
+    text-align: center;
+    width: 300px;
+}
+
 #gameBoard {
     display: grid;
     grid-template-columns: 65px repeat(10, 30px);
