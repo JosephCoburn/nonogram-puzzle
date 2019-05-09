@@ -28,6 +28,7 @@ document.getElementById('gameBoard')
 /*----- functions -----*/
 initialize();
 
+// Make tiles toggle white/black and flip board cell value 0/1
 function handleClick(evt) {
     const marker = evt.target;
     var markerString = marker.id;
@@ -36,11 +37,19 @@ function handleClick(evt) {
     rowArr.pop();
     var colIdx = rowArr.join('').replace('c', '');
     if (colIdx != 0) {
-        if (!marker.style.backgroundColor) {
-            marker.style.backgroundColor = 'black'
-            board[rowIdx][colIdx] = 1;
-        } else if (marker.style.backgroundColor = 'black') {
-            marker.style.backgroundColor = ''
+        if (evt.altKey === false) {
+            if (!marker.style.backgroundColor) {
+                marker.style.backgroundColor = 'black'
+                // debugger
+                board[rowIdx][colIdx] = 1;
+            } else if (marker.style.backgroundColor = 'black') {
+                // debugger
+                marker.style.backgroundColor = ''
+                board[rowIdx][colIdx] = 0;
+            } 
+        }
+        else {
+            marker.style.backgroundColor = 'red'
             board[rowIdx][colIdx] = 0;
         }
     }
