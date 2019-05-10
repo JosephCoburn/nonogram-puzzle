@@ -26,7 +26,7 @@ button {
     font-family: 'Didact Gothic', sans-serif;
 }
 
-#gameboard {
+#puzzleboard {
     display: grid;
     grid-template-columns: 65px repeat(10, 30px);
     grid-template-rows: 30px repeat(9, 30px); 

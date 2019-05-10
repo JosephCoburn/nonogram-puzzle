@@ -20,11 +20,11 @@ var board;
 /*----- cached element references -----*/
 var cells = document.querySelectorAll('div');
 var headline = document.getElementById('headline');
-var gameBoard = document.getElementById('gameboard');
+var puzzleBoard = document.getElementById('puzzleboard');
 var restartButton = document.getElementById('restart');
 
 /*----- event listeners -----*/
-gameBoard.addEventListener('mousedown', handleClick);
+puzzleBoard.addEventListener('mousedown', handleClick);
 restartButton.addEventListener('click', cleanBoard);
 
 /*----- functions -----*/
@@ -34,7 +34,7 @@ initialize();
 function cleanBoard() {
     initialize()
     cells.forEach(function (el) {el.style.backgroundColor = ''})
-    headline.innerHTML = 'Nonogram Game';
+    headline.innerHTML = 'Nonogram Puzzle';
 }
 
 // Make tiles toggle white/black AND toggle cell value 0/1
@@ -67,7 +67,7 @@ function checkWin() {
     if (board.toString() == solution.toString()) {
         headline.innerHTML = 'You Win!';
     } else if (board.toString() !== solution.toString()) {
-        headline.innerHTML = 'Nonogram Game';
+        headline.innerHTML = 'Nonogram Puzzle';
     }
 }
 

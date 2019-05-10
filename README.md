@@ -1,16 +1,30 @@
-# Nonogram Game
+# Nonogram Puzzle
 #### Description
 *Nonograms were created in 1987 by Japanese designer Non Ishida, when she won a design competition by illuminating specific rooms in a skyscraper to create an image. The resulting paper puzzles Ishida created became popularized in 1990 through their regular inclusion in the British newspaper, "The Sunday Telegraph". Nonograms are also commonly known as Griddlers or Picross. One early example of these puzzles in popular culture was Nintendo's 1995 release of "Mario's Picross" for Game Boy.*
 
-![Nonogram Game Screenshot](images/nonogram-screenshot.png "Nonogram Game Screenshot")
+![Nonogram Screenshot](images/nonogram-screenshot.png "Nonogram Screenshot")
 
-### [Play Game](https://josephcoburn.github.io/nonogram-game/)
+### [Open Puzzle](https://josephcoburn.github.io/nonogram-game/)
 
 #### Technologies Used:
 *HTML, CSS, Javascript*
 
 #### Getting Started
-*Click to shade cells. Option+Click to place flags. Numerical values on board indicate the number of contiguous shaded cells. Two values in one key cell indicates a break in contiguity. Column key values are displayed above; row key values are displayed left. Use logic to continue until solution is reached.*
+
+*There are a number of strategies you can use to deduce the correct placement of filled-in cells for each row and cell. Read about them 
+[here on wikipedia](https://en.wikipedia.org/wiki/Nonogram#Solution_techniques). See the example below for a guide on how to solve a sample nonogram puzzle.*
+
+Focus on one row at a time. Leave tiles blank if uncertain of row solution. You can deduce the row/column solution with certainty based on some key values, but not always. Using red tiles (option+click for mac, alt+click for pc) to mark spaces in solved rows or columns will help with later deductions.
+
+![Sample Solution](https://media.giphy.com/media/j3KGgQhrRKiLps62I3/giphy.gif)
+
+
+Next focus on each column. Repeat this process until you have found a solution.
+
+![Sample Solution](https://media.giphy.com/media/SqgBF5Zs7fafQIcHrj/giphy.gif)
+
+
+![Sample Solution](https://media.giphy.com/media/U5IlbOo5IoXEHBwfPn/giphy.gif)
 
 #### Next Steps
 Future features include:
