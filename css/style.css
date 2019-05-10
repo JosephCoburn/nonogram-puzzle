@@ -22,7 +22,11 @@ article {
     font-size: 18px;
 }
 
-#gameBoard {
+button {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#gameboard {
     display: grid;
     grid-template-columns: 65px repeat(10, 30px);
     grid-template-rows: 30px repeat(9, 30px); 
@@ -33,18 +37,18 @@ div {
     justify-content: center;
 }
 
-.topKey {
+.topkey {
     grid-template-columns: 65px repeat(10, 30px);
     display: grid;
     text-align: center;
 }
 
-.topKey div {
+.topkey div {
     display: flex;
     align-items: flex-end;
 }
 
-.leftKey {
+.leftkey {
     text-align: right;
     padding: 2px 5px 0px 0px;
 }

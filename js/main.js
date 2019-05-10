@@ -1,5 +1,4 @@
 /*----- constants -----*/
-
 // Store puzzle solution
 const solution = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // column 0
@@ -19,16 +18,26 @@ const solution = [
 var board;
 
 /*----- cached element references -----*/
-var headline = document.getElementById("headline");
+var cells = document.querySelectorAll('div');
+var headline = document.getElementById('headline');
+var gameBoard = document.getElementById('gameboard');
+var restartButton = document.getElementById('restart');
 
 /*----- event listeners -----*/
-document.getElementById('gameBoard')
-  .addEventListener('mousedown', handleClick);
+gameBoard.addEventListener('mousedown', handleClick);
+restartButton.addEventListener('click', cleanBoard);
 
 /*----- functions -----*/
 initialize();
 
-// Make tiles toggle white/black and flip board cell value 0/1
+// Make all cells white on restart
+function cleanBoard() {
+    initialize()
+    cells.forEach(function (el) {el.style.backgroundColor = ''})
+    headline.innerHTML = 'Nonogram Game';
+}
+
+// Make tiles toggle white/black AND toggle cell value 0/1
 function handleClick(evt) {
     const marker = evt.target;
     var markerString = marker.id;
@@ -40,15 +49,12 @@ function handleClick(evt) {
         if (evt.altKey === false) {
             if (!marker.style.backgroundColor) {
                 marker.style.backgroundColor = 'black'
-                // debugger
                 board[rowIdx][colIdx] = 1;
             } else if (marker.style.backgroundColor = 'black') {
-                // debugger
                 marker.style.backgroundColor = ''
                 board[rowIdx][colIdx] = 0;
             } 
-        }
-        else {
+        } else {
             marker.style.backgroundColor = 'red'
             board[rowIdx][colIdx] = 0;
         }
@@ -58,12 +64,12 @@ function handleClick(evt) {
 
 // Check if current board array matches solution array
 function checkWin() {
-    if (board.toString() === solution.toString()) {
-        headline.innerHTML = "You Win!";
-        headline.style.fontSize = "70px";
+    if (board.toString() == solution.toString()) {
+        headline.innerHTML = 'You Win!';
+    } else if (board.toString() !== solution.toString()) {
+        headline.innerHTML = 'Nonogram Game';
     }
 }
-
 
 // Initialize board
 function initialize() {

@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nonogram Game</title>
-    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Tangerine" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
 </head>
 
 <body>
     <h1 id="headline">Nonogram Game</h1>
-    <section class="topKey">
+    <section class="topkey">
         <div id="c0r0"></div>
         <div id="c1r0">4</div>
         <div id="c2r0">1<br>2</div>
@@ -27,8 +28,8 @@
         <div id="c10r0">4</div>
     </section>
 
-    <section id="gameBoard">
-        <div class="leftKey" id="c0r1">1 &nbsp;&nbsp;1</div>
+    <section id="gameboard">
+        <div class="leftkey" id="c0r1">1 &nbsp;&nbsp;1</div>
         <div id="c1r1"></div>
         <div id="c2r1"></div>
         <div id="c3r1"></div>
@@ -40,7 +41,7 @@
         <div id="c9r1"></div>
         <div id="c10r1"></div>
 
-        <div class="leftKey" id="c0r2">2 &nbsp;&nbsp;2</div>
+        <div class="leftkey" id="c0r2">2 &nbsp;&nbsp;2</div>
         <div id="c1r2"></div>
         <div id="c2r2"></div>
         <div id="c3r2"></div>
@@ -52,7 +53,7 @@
         <div id="c9r2"></div>
         <div id="c10r2"></div>
 
-        <div class="leftKey" id="c0r3">1 &nbsp;&nbsp;1</div>
+        <div class="leftkey" id="c0r3">1 &nbsp;&nbsp;1</div>
         <div id="c1r3"></div>
         <div id="c2r3"></div>
         <div id="c3r3"></div>
@@ -64,7 +65,7 @@
         <div id="c9r3"></div>
         <div id="c10r3"></div>
 
-        <div class="leftKey" id="c0r4">6</div>
+        <div class="leftkey" id="c0r4">6</div>
         <div id="c1r4"></div>
         <div id="c2r4"></div>
         <div id="c3r4"></div>
@@ -76,7 +77,7 @@
         <div id="c9r4"></div>
         <div id="c10r4"></div>
 
-        <div class="leftKey" id="c0r5">2 &nbsp;&nbsp;2 &nbsp;&nbsp;2</div>
+        <div class="leftkey" id="c0r5">2 &nbsp;&nbsp;2 &nbsp;&nbsp;2</div>
         <div id="c1r5"></div>
         <div id="c2r5"></div>
         <div id="c3r5"></div>
@@ -88,7 +89,7 @@
         <div id="c9r5"></div>
         <div id="c10r5"></div>
 
-        <div class="leftKey" id="c0r6">10</div>
+        <div class="leftkey" id="c0r6">10</div>
         <div id="c1r6"></div>
         <div id="c2r6"></div>
         <div id="c3r6"></div>
@@ -100,7 +101,7 @@
         <div id="c9r6"></div>
         <div id="c10r6"></div>
 
-        <div class="leftKey" id="c0r7">1 &nbsp;&nbsp;6&nbsp;&nbsp; 1</div>
+        <div class="leftkey" id="c0r7">1 &nbsp;&nbsp;6&nbsp;&nbsp; 1</div>
         <div id="c1r7"></div>
         <div id="c2r7"></div>
         <div id="c3r7"></div>
@@ -112,7 +113,7 @@
         <div id="c9r7"></div>
         <div id="c10r7"></div>
 
-        <div class="leftKey" id="c0r8">1 &nbsp;1 &nbsp;1 &nbsp;1</div>
+        <div class="leftkey" id="c0r8">1 &nbsp;1 &nbsp;1 &nbsp;1</div>
         <div id="c1r8"></div>
         <div id="c2r8"></div>
         <div id="c3r8"></div>
@@ -124,7 +125,7 @@
         <div id="c9r8"></div>
         <div id="c10r8"></div>
 
-        <div class="leftKey" id="c0r9">1 &nbsp;2 &nbsp;2 &nbsp;1</div>
+        <div class="leftkey" id="c0r9">1 &nbsp;2 &nbsp;2 &nbsp;1</div>
         <div id="c1r9"></div>
         <div id="c2r9"></div>
         <div id="c3r9"></div>
@@ -136,7 +137,7 @@
         <div id="c9r9"></div>
         <div id="c10r9"></div>
 
-        <div class="leftKey" id="c0r10">2</div>
+        <div class="leftkey" id="c0r10">2</div>
         <div id="c1r10"></div>
         <div id="c2r10"></div>
         <div id="c3r10"></div>
@@ -148,9 +149,12 @@
         <div id="c9r10"></div>
         <div id="c10r10"></div>
     </section>
-    <article>Click to shade cells. Option+Click to place flags. Numerical values on board indicate the number 
-        of contiguous shaded cells. Two values in one key cell indicates 
+    <article>
+        Click to shade cells. Option+Click to place flags. Numerical values on board indicate the number 
+        of contiguous shaded cells. Two or more values in one key cell indicates 
         a break in contiguity. Column key values are displayed above; row key values are
-        displayed left. Use logic to continue until solution is reached.</article>
+        displayed left. Use logic to continue until solution is reached.
+    </article>
+    <button id="restart">Restart</button>
 </body>
 </html>
