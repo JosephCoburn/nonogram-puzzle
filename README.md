@@ -23,7 +23,6 @@ Next focus on each column. Repeat this process until you have found a solution.
 
 ![Sample Solution](https://media.giphy.com/media/SqgBF5Zs7fafQIcHrj/giphy.gif)
 
-
 ![Sample Solution](https://media.giphy.com/media/U5IlbOo5IoXEHBwfPn/giphy.gif)
 
 #### Next Steps
