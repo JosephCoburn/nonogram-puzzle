@@ -4,7 +4,7 @@
 
 ![Nonogram Screenshot](images/nonogram-screenshot.png "Nonogram Screenshot")
 
-### [Open Puzzle](https://josephcoburn.github.io/nonogram-game/)
+### [Open Puzzle](https://josephcoburn.github.io/nonogram-puzzle/)
 
 #### Technologies Used:
 *HTML, CSS, Javascript*
