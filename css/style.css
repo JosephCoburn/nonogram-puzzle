@@ -1,6 +1,7 @@
 body {
     font-family: 'Didact Gothic', sans-serif;
     height: 100vh;
+    width: 100%;
     margin: 1px;
     display: flex;
     flex-direction: column;
